@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <StartupObject>AnimalFormsExampleForCLIPSdotNetCore.Program</StartupObject>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>0</WarningLevel>
+    <OutputPath>bin\Debug\netcoreapp3.1\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="animal.clp" />
+    <None Remove="animal_en.clp" />
+    <None Remove="bcengine.clp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="animal.clp" />
+    <EmbeddedResource Include="animal_en.clp" />
+    <EmbeddedResource Include="bcengine.clp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CLIPSdotNetCoreWrapper\CLIPSdotNetCoreWrapper.vcxproj" />
+  </ItemGroup>
+
+</Project>

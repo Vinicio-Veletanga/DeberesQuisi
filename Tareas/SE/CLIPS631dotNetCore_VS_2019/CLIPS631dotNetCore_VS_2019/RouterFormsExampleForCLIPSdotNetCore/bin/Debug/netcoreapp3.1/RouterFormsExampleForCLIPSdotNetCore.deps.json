@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "RouterFormsExampleForCLIPSdotNetCore/1.0.0": {
+        "dependencies": {
+          "CLIPSdotNetCoreWrapper": "1.0.0"
+        },
+        "runtime": {
+          "RouterFormsExampleForCLIPSdotNetCore.dll": {}
+        }
+      },
+      "CLIPSdotNetCoreWrapper/1.0.0": {
+        "runtime": {
+          "CLIPSdotNetCoreWrapper.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RouterFormsExampleForCLIPSdotNetCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CLIPSdotNetCoreWrapper/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
