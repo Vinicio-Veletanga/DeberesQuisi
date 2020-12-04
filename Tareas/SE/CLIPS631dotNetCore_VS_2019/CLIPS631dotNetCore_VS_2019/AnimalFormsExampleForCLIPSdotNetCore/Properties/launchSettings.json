@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "AnimalFormsExampleForCLIPSdotNetCore": {
+      "commandName": "Project",
+      "sqlDebugging": true,
+      "nativeDebugging": true
+    }
+  }
+}

@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="animal.clp" />
+    <None Remove="animal_en.clp" />
+    <None Remove="auto.clp" />
+    <None Remove="auto_en.clp" />
+    <None Remove="bcengine.clp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="animal.clp" />
+    <EmbeddedResource Include="animal_en.clp" />
+    <EmbeddedResource Include="auto.clp" />
+    <EmbeddedResource Include="auto_en.clp" />
+    <EmbeddedResource Include="bcengine.clp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CLIPSdotNetCoreWrapper\CLIPSdotNetCoreWrapper.vcxproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
